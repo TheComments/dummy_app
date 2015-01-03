@@ -29,12 +29,8 @@ gem 'rails_config'
 # SLIM
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 gem 'slim'
-
-gem 'the_data_role_block_jquery',
-  path: '../../../the_data_role_block_jquery'
-
-gem 'the_data_role_block_slim',
-  path: '../../../the_data_role_block_slim'
+gem 'the_data_role_block_slim'
+gem 'the_data_role_block_jquery'
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # ~ SLIM
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -42,19 +38,19 @@ gem 'the_data_role_block_slim',
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # THE COMMENTS 3.0
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-gem 'the_comments', path: '../../'
+# gem 'the_comments', path: '../the_comments'
 
 gem 'the_comments_base',
-  path: '../../../the_comments_base'
+  path: '../the_comments_base'
 
 gem 'the_comments_manager',
-  path: '../../../the_comments_manager'
+  path: '../the_comments_manager'
 
 gem 'the_comments_subscriptions',
-  path: '../../../the_comments_subscriptions'
+  path: '../the_comments_subscriptions'
 
 gem 'the_comments_antispam_services',
-  path: '../../../the_comments_antispam_services'
+  path: '../the_comments_antispam_services'
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # ~ THE COMMENTS
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

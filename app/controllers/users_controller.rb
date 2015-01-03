@@ -4,4 +4,9 @@ class UsersController < ApplicationController
     auto_login user if user
     redirect_to request.referrer || root_path
   end
+
+  def destroy
+    logout
+    redirect_to root_url, :notice => "Logged out!"
+  end
 end
