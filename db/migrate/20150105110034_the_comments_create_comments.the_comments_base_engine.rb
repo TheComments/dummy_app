@@ -1,11 +1,11 @@
-# This migration comes from the_comments_engine (originally 20130101010102)
+# This migration comes from the_comments_base_engine (originally 20130101010102)
 class TheCommentsCreateComments < ActiveRecord::Migration
   def change
     create_table :comments do |t|
       # relations
       t.integer :user_id
       t.integer :holder_id
-      
+
       # polymorphic, commentable object
       t.integer :commentable_id
       t.string  :commentable_type
@@ -17,7 +17,7 @@ class TheCommentsCreateComments < ActiveRecord::Migration
 
       # comment
       t.string :anchor
-      
+
       t.string :title
       t.string :contacts
 

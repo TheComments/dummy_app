@@ -1,4 +1,4 @@
-# This migration comes from the_comments_engine (originally 20130101010104)
+# This migration comes from the_comments_antispam_services_engine (originally 20130101010104)
 class TheCommentsAddAntispamServicesFields < ActiveRecord::Migration
   def change
     change_table :comments do |t|

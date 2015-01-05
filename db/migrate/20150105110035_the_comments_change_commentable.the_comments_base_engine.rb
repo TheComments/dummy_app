@@ -1,4 +1,4 @@
-# This migration comes from the_comments_engine (originally 20130101010103)
+# This migration comes from the_comments_base_engine (originally 20130101010103)
 class TheCommentsChangeCommentable < ActiveRecord::Migration
   def change
     # Uncomment this. Add fields to Commentable Models

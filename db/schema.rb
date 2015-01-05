@@ -11,16 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141208191744) do
+ActiveRecord::Schema.define(version: 20150105110044) do
 
-  create_table "comment_subscriptions", force: true do |t|
+  create_table "comment_subscriptions", force: :cascade do |t|
     t.integer "user_id"
     t.integer "comment_id"
     t.string  "email",      default: ""
     t.string  "state",      default: "active"
   end
 
-  create_table "comments", force: true do |t|
+  create_table "comments", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "holder_id"
     t.integer  "commentable_id"
@@ -51,7 +51,7 @@ ActiveRecord::Schema.define(version: 20141208191744) do
     t.string   "yandex_cleanweb_id",    default: ""
   end
 
-  create_table "posts", force: true do |t|
+  create_table "posts", force: :cascade do |t|
     t.integer  "user_id"
     t.string   "title"
     t.text     "content"
@@ -62,7 +62,7 @@ ActiveRecord::Schema.define(version: 20141208191744) do
     t.integer  "deleted_comments_count",   default: 0
   end
 
-  create_table "users", force: true do |t|
+  create_table "users", force: :cascade do |t|
     t.string   "username",                                null: false
     t.string   "email"
     t.string   "crypted_password"
