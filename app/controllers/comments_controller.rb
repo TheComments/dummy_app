@@ -8,7 +8,7 @@ class CommentsController < ApplicationController
 
   layout 'admin'
 
-  include TheComments::Controller
+  include TheCommentsBase::Controller
 
   # Public methods:
   #

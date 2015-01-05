@@ -47,7 +47,7 @@ PATH
   specs:
     the_comments_manager (0.0.1)
       bootstrap-sass
-      jbuilder (~> 1.5.3)
+      jbuilder
       kaminari
       slim
       the_data_role_block_jquery

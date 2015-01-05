@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
-  include TheComments::User
-  include TheComments::Commentable
+  include TheCommentsBase::User
+  include TheCommentsBase::Commentable
 
   authenticates_with_sorcery!
 
