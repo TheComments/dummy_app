@@ -1,4 +1,50 @@
 GIT
+  remote: git://github.com/TheComments/the_comments_antispam_services.git
+  revision: a65198392d4adc2510427c2b84e7cbb636c6592a
+  specs:
+    the_comments_antispam_services (0.0.1)
+      activejob (~> 4.2.0)
+      the_comments_base
+      the_viking (~> 1.0.0)
+      yandex_cleanweb (~> 0.0.6)
+
+GIT
+  remote: git://github.com/TheComments/the_comments_base.git
+  revision: 2979cbc980065b94326178de1224f18421a8502b
+  specs:
+    the_comments_base (0.0.1)
+      awesome_nested_set
+      slim
+      state_machine (~> 1.2.0)
+      the_data_role_block_jquery
+      the_data_role_block_slim
+      the_notification (~> 0.0.1)
+      the_sortable_tree (~> 2.5.0)
+
+GIT
+  remote: git://github.com/TheComments/the_comments_manager.git
+  revision: 25d003f1bbcfb370b0acf4d3eb4ee5cbfa040f20
+  specs:
+    the_comments_manager (0.0.1)
+      bootstrap-sass
+      jbuilder
+      kaminari
+      slim
+      the_data_role_block_jquery
+      the_data_role_block_slim
+      the_notification (~> 0.0.1)
+      the_simple_sort (~> 0.0.2)
+
+GIT
+  remote: git://github.com/TheComments/the_comments_subscriptions.git
+  revision: 18eabe80ab3c5110d86b34e1f8d224b383cfbdf6
+  specs:
+    the_comments_subscriptions (0.0.1)
+      activejob (~> 4.2.0)
+      the_comments_base
+      the_encrypted_string (~> 0.0.3)
+
+GIT
   remote: git://github.com/TheProfitCMS/the_notification.git
   revision: 42de11d725c0d171a13444e2e478f9056766b852
   branch: master
@@ -15,53 +61,11 @@ GIT
 
 GIT
   remote: https://github.com/collectiveidea/awesome_nested_set.git
-  revision: 8b93a96ead33a3d10878be06ca059c4976f20022
+  revision: 57bada268cbca6cdc7dd3656d943ef1b76fbc3c0
   branch: master
   specs:
     awesome_nested_set (3.0.1)
       activerecord (>= 4.0.0, < 5)
-
-PATH
-  remote: ../the_comments_antispam_services
-  specs:
-    the_comments_antispam_services (0.0.1)
-      activejob (~> 4.2.0)
-      the_comments_base
-      the_viking (~> 1.0.0)
-      yandex_cleanweb (~> 0.0.6)
-
-PATH
-  remote: ../the_comments_base
-  specs:
-    the_comments_base (0.0.1)
-      awesome_nested_set
-      slim
-      state_machine (~> 1.2.0)
-      the_data_role_block_jquery
-      the_data_role_block_slim
-      the_notification (~> 0.0.1)
-      the_sortable_tree (~> 2.5.0)
-
-PATH
-  remote: ../the_comments_manager
-  specs:
-    the_comments_manager (0.0.1)
-      bootstrap-sass
-      jbuilder
-      kaminari
-      slim
-      the_data_role_block_jquery
-      the_data_role_block_slim
-      the_notification (~> 0.0.1)
-      the_simple_sort (~> 0.0.2)
-
-PATH
-  remote: ../the_comments_subscriptions
-  specs:
-    the_comments_subscriptions (0.0.1)
-      activejob (~> 4.2.0)
-      the_comments_base
-      the_encrypted_string (~> 0.0.3)
 
 GEM
   remote: https://rubygems.org/
@@ -287,7 +291,7 @@ GEM
       hitimes
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    uglifier (2.6.0)
+    uglifier (2.6.1)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
     yandex_cleanweb (0.0.6)
