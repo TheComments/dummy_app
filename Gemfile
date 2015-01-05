@@ -55,6 +55,7 @@ gem 'the_comments_subscriptions',
 gem 'the_comments_antispam_services',
   # path: '../the_comments_antispam_services'
   github: "TheComments/the_comments_antispam_services"
+
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # ~ THE COMMENTS
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
