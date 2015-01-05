@@ -3,4 +3,4 @@ rvm:
   - 2.1.0
   - 2.2.0
 gemfile: Gemfile
-script: "rake db:bootstrap && rspec --format documentation"
+script: "bundle exec rake db:bootstrap && bundle exec rspec --format documentation"
