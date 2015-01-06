@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 20150105110044) do
     t.text     "raw_content"
     t.text     "content"
     t.string   "view_token"
-    t.string   "state",                 default: "draft"
+    t.string   "state",                 default: ""
     t.string   "ip",                    default: "undefined"
     t.string   "referer",               default: "undefined"
     t.string   "user_agent",            default: "undefined"

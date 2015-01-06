@@ -1,8 +1,8 @@
+#= require the_log
+
 #= require jquery
 #= require jquery_ujs
 #= require jquery.data-role-block
-
-#= require the_log
 
 #= require the_notification/vendors/toastr
 #= require the_notification

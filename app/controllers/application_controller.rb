@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  include TheCommentsBase::ViewToken
+  include ::TheCommentsBase::ViewToken
 
   def comments_cookies_token
     'DefineYourTheCommentsCookies'

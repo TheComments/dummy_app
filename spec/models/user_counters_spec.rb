@@ -213,6 +213,30 @@ describe User do
       base_test_situation
     end
 
+    it 'Check for `default_state`' do
+      Comment.all.map(&:state).uniq.should == ['draft']
+
+      # set to published
+      TheCommentsBase.config.default_state = 'published'
+      Comment.create!(raw_content: 'test')
+      Comment.last.state.should == 'published'
+      TheCommentsBase.config.default_state = 'draft'
+
+      # set to deleted
+      TheCommentsBase.config.default_state = 'deleted'
+      Comment.create!(raw_content: 'test')
+      Comment.last.state.should == 'deleted'
+
+      TheCommentsBase.config.default_state = 'draft'
+    end
+  end
+
+  context "Commentable Denormalization" do
+    after(:all) { destroy_all }
+    before(:all) do
+      base_test_situation
+    end
+
     it 'should have denormalized fields' do
       title = "New Title!"
       @post.update_attribute(:title, title)

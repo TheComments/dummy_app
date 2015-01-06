@@ -10,7 +10,7 @@ GIT
 
 GIT
   remote: git://github.com/TheComments/the_comments_base.git
-  revision: 2979cbc980065b94326178de1224f18421a8502b
+  revision: 1947ce02e134a711efb42c644eee9e7a31c15eff
   specs:
     the_comments_base (0.0.1)
       awesome_nested_set
@@ -23,7 +23,7 @@ GIT
 
 GIT
   remote: git://github.com/TheComments/the_comments_manager.git
-  revision: 25d003f1bbcfb370b0acf4d3eb4ee5cbfa040f20
+  revision: 08f1df7544264a42dc6bc1e14c601e794485008c
   specs:
     the_comments_manager (0.0.1)
       bootstrap-sass
@@ -37,7 +37,7 @@ GIT
 
 GIT
   remote: git://github.com/TheComments/the_comments_subscriptions.git
-  revision: 18eabe80ab3c5110d86b34e1f8d224b383cfbdf6
+  revision: 307d4cf653847af41311d249ee67cb27262ce1e7
   specs:
     the_comments_subscriptions (0.0.1)
       activejob (~> 4.2.0)
