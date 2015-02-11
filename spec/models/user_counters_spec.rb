@@ -214,20 +214,8 @@ describe User do
     end
 
     it 'Check for `default_state`' do
-      Comment.all.map(&:state).uniq.should == ['draft']
-
-      # set to published
-      TheCommentsBase.config.default_state = 'published'
       Comment.create!(raw_content: 'test')
-      Comment.last.state.should == 'published'
-      TheCommentsBase.config.default_state = 'draft'
-
-      # set to deleted
-      TheCommentsBase.config.default_state = 'deleted'
-      Comment.create!(raw_content: 'test')
-      Comment.last.state.should == 'deleted'
-
-      TheCommentsBase.config.default_state = 'draft'
+      Comment.last.state.to_s.should == TheCommentsBase.config.default_state.to_s
     end
   end
 
@@ -280,8 +268,9 @@ describe User do
 
     before(:all) do
       base_test_situation
+
       @comment = Comment.first
-      @comment.to_published
+      @comment.to_published!
 
       @user.reload
       @post.reload
@@ -316,8 +305,8 @@ describe User do
     before(:all) do
       base_test_situation
       @comment = Comment.first
-      @comment.to_published
-      @comment.to_deleted
+      @comment.to_published!
+      @comment.to_deleted!
 
       @user.reload
       @post.reload
@@ -366,7 +355,7 @@ describe User do
 
     it 'has correct counters values after branch deleting' do
       @comment = Comment.first.children.first
-      @comment.to_deleted
+      @comment.to_deleted!
 
       @user.reload
       @post.reload

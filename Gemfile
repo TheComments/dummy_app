@@ -40,21 +40,25 @@ gem 'the_data_role_block_jquery'
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # gem 'the_comments', path: '../the_comments'
 
+gem 'state_machines-activerecord',
+  github: 'state-machines/state_machines-activerecord',
+  branch: 'master'
+
 gem 'the_comments_base',
-  # path: '../the_comments_base'
-  github: "TheComments/the_comments_base"
+  path: '../the_comments_base', branch: 'aasm'
+  # github: "TheComments/the_comments_base",
 
 gem 'the_comments_manager',
-  # path: '../the_comments_manager'
-  github: "TheComments/the_comments_manager"
+  path: '../the_comments_manager'
+  # github: "TheComments/the_comments_manager"
 
 gem 'the_comments_subscriptions',
-  # path: '../the_comments_subscriptions'
-  github: "TheComments/the_comments_subscriptions"
+  path: '../the_comments_subscriptions'
+  # github: "TheComments/the_comments_subscriptions"
 
 gem 'the_comments_antispam_services',
-  # path: '../the_comments_antispam_services'
-  github: "TheComments/the_comments_antispam_services"
+  path: '../the_comments_antispam_services'
+  # github: "TheComments/the_comments_antispam_services"
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # ~ THE COMMENTS

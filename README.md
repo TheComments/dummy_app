@@ -1,13 +1,33 @@
 ## TheComments Dummy App
 
-### First step
+### Create DIR for development
 
 ```
-git clone https://github.com/the-teacher/the_comments.git
+mkdir test_the_comments
+cd test_the_comments
+```
 
-cd the_comments/spec/dummy_app/
+### Clone dependencies
 
-bundle
+```
+git clone git@github.com:TheComments/dummy_app.git
+git clone git@github.com:TheComments/the_comments_base
+git clone git@github.com:TheComments/the_comments_manager
+git clone git@github.com:TheComments/the_comments_subscriptions
+git clone git@github.com:TheComments/the_comments_antispam_services
+```
+
+### Bundle
+
+```
+cd dummy_app/
+bundle install --binstubs
+```
+
+### Start BACKGROUND PROCESSES (Redis + Sidekiq)
+
+```
+_app/start.sh
 ```
 
 ### App start
@@ -27,7 +47,6 @@ http://localhost:3000/
 ### Tests start
 
 ```
-rake db:bootstrap RAILS_ENV=test
-
-rspec --format documentation
+RAILS_ENV=test rake db:bootstrap
+RAILS_ENV=test rspec --format documentation
 ```

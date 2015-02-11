@@ -28,8 +28,8 @@ class TheCommentsCreateComments < ActiveRecord::Migration
       t.string :view_token
 
       # STATES: %w[ draft published deleted ]
-      # Please, keep field `state` blank
-      # Reason: the_comments_base/app/models/concerns/the_comments_base/comment_states.rb:10
+      # I think, will be better to keep column `state` blank
+      # AASM will provide default state via `TheCommentsBase.config.default_state`
       t.string :state, default: ''
 
       # base user data (BanHammer power)
