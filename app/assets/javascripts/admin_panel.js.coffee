@@ -3,8 +3,7 @@
 
 #= require bootstrap
 #= require jquery.data-role-block
-#= require the_comments_manage_panel
-
+#= require the_comments/manager
 
 $ ->
-  TheCommentsManagePanel.init()
+  TheCommentsManager.init()

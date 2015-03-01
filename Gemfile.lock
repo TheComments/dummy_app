@@ -43,6 +43,7 @@ PATH
   remote: ../the_comments_base
   specs:
     the_comments_base (0.0.1)
+      aasm (~> 4.0)
       awesome_nested_set
       slim
       the_data_role_block_jquery
@@ -74,6 +75,7 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
+    aasm (4.0.8)
     actionmailer (4.2.0)
       actionpack (= 4.2.0)
       actionview (= 4.2.0)
