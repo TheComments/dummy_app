@@ -1,35 +1,3 @@
-GIT
-  remote: git://github.com/TheProfitCMS/the_notification.git
-  revision: 42de11d725c0d171a13444e2e478f9056766b852
-  branch: master
-  specs:
-    the_notification (0.0.1)
-      slim
-
-GIT
-  remote: git://github.com/state-machines/state_machines-activerecord.git
-  revision: 396e95fc5941201f670b38442debc39bd66b9e56
-  branch: master
-  specs:
-    state_machines-activerecord (0.0.1)
-      activerecord (~> 4.1)
-      state_machines-activemodel (~> 0.0.3)
-
-GIT
-  remote: git://github.com/thomas-mcdonald/bootstrap-sass.git
-  revision: f3b99eda0005cd62a8ab0b1f5df8a04ec9a7bb8d
-  specs:
-    bootstrap-sass (3.3.1.0)
-      sass (~> 3.2)
-
-GIT
-  remote: https://github.com/collectiveidea/awesome_nested_set.git
-  revision: 57bada268cbca6cdc7dd3656d943ef1b76fbc3c0
-  branch: master
-  specs:
-    awesome_nested_set (3.0.1)
-      activerecord (>= 4.0.0, < 5)
-
 PATH
   remote: ../the_comments_antispam_services
   specs:
@@ -48,7 +16,7 @@ PATH
       slim
       the_data_role_block_jquery
       the_data_role_block_slim
-      the_notification (~> 0.0.1)
+      the_notification
       the_sortable_tree (~> 2.5.0)
 
 PATH
@@ -61,7 +29,7 @@ PATH
       slim
       the_data_role_block_jquery
       the_data_role_block_slim
-      the_notification (~> 0.0.1)
+      the_notification
       the_simple_sort (~> 0.0.2)
 
 PATH
@@ -75,7 +43,7 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
-    aasm (4.0.8)
+    aasm (4.1.0)
     actionmailer (4.2.0)
       actionpack (= 4.2.0)
       actionview (= 4.2.0)
@@ -112,7 +80,15 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     arel (6.0.0)
-    bcrypt (3.1.9)
+    autoprefixer-rails (5.1.7)
+      execjs
+      json
+    awesome_nested_set (3.0.2)
+      activerecord (>= 4.0.0, < 5)
+    bcrypt (3.1.10)
+    bootstrap-sass (3.3.3)
+      autoprefixer-rails (>= 5.0.0.1)
+      sass (>= 3.2.19)
     builder (3.2.2)
     celluloid (0.16.0)
       timers (~> 4.0.0)
@@ -123,14 +99,14 @@ GEM
     coffee-script (2.3.0)
       coffee-script-source
       execjs
-    coffee-script-source (1.8.0)
-    connection_pool (2.1.0)
+    coffee-script-source (1.9.1)
+    connection_pool (2.1.1)
     daemons (1.1.9)
     diff-lcs (1.2.5)
     encryptor (1.3.0)
     erubis (2.7.0)
-    eventmachine (1.0.4)
-    execjs (2.2.2)
+    eventmachine (1.0.7)
+    execjs (2.3.0)
     factory_girl (4.5.0)
       activesupport (>= 3.0.0)
     factory_girl_rails (4.5.0)
@@ -138,13 +114,13 @@ GEM
       railties (>= 3.0.0)
     faker (1.4.3)
       i18n (~> 0.5)
-    faraday (0.9.0)
+    faraday (0.9.1)
       multipart-post (>= 1.2, < 3)
-    globalid (0.3.0)
+    globalid (0.3.3)
       activesupport (>= 4.1.0)
-    haml (4.1.0.beta.1)
+    haml (4.0.6)
       tilt
-    haml-rails (0.6.0)
+    haml-rails (0.8.2)
       actionpack (>= 4.0.1)
       activesupport (>= 4.0.1)
       haml (>= 3.1, < 5.0)
@@ -152,12 +128,11 @@ GEM
       railties (>= 4.0.1)
     hike (1.2.3)
     hitimes (1.2.2)
-    hpricot (0.8.6)
-    html2haml (1.0.1)
+    html2haml (2.0.0)
       erubis (~> 2.7.0)
-      haml (>= 4.0.0.rc.1)
-      hpricot (~> 0.8.6)
-      ruby_parser (~> 3.1.1)
+      haml (~> 4.0.0)
+      nokogiri (~> 1.6.0)
+      ruby_parser (~> 3.5)
     i18n (0.7.0)
     jbuilder (1.5.3)
       activesupport (>= 3.0.0)
@@ -166,9 +141,9 @@ GEM
       rails-dom-testing (~> 1.0)
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
-    json (1.8.1)
-    jwt (1.2.0)
-    kaminari (0.16.1)
+    json (1.8.2)
+    jwt (1.3.0)
+    kaminari (0.16.3)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
     loofah (2.0.1)
@@ -178,14 +153,14 @@ GEM
     method_source (0.8.2)
     mime-types (2.4.3)
     mini_portile (0.6.2)
-    minitest (5.5.0)
+    minitest (5.5.1)
     multi_json (1.10.1)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
-    nokogiri (1.6.5)
+    nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
     oauth (0.4.7)
-    oauth2 (0.9.4)
+    oauth2 (1.0.0)
       faraday (>= 0.8, < 0.10)
       jwt (~> 1.0)
       multi_json (~> 1.3)
@@ -195,10 +170,10 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
-    pry-rails (0.3.2)
+    pry-rails (0.3.3)
       pry (>= 0.9.10)
     rack (1.6.0)
-    rack-test (0.6.2)
+    rack-test (0.6.3)
       rack (>= 1.0)
     rails (4.2.0)
       actionmailer (= 4.2.0)
@@ -227,7 +202,7 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (10.4.2)
-    redis (3.2.0)
+    redis (3.2.1)
     redis-namespace (1.5.1)
       redis (~> 3.0, >= 3.0.4)
     rspec-collection_matchers (1.1.2)
@@ -235,7 +210,7 @@ GEM
     rspec-core (2.99.2)
     rspec-expectations (2.99.2)
       diff-lcs (>= 1.1.3, < 2.0)
-    rspec-mocks (2.99.2)
+    rspec-mocks (2.99.3)
     rspec-rails (2.99.0)
       actionpack (>= 3.0)
       activemodel (>= 3.0)
@@ -245,45 +220,43 @@ GEM
       rspec-core (~> 2.99.0)
       rspec-expectations (~> 2.99.0)
       rspec-mocks (~> 2.99.0)
-    ruby_parser (3.1.3)
+    ruby_parser (3.6.4)
       sexp_processor (~> 4.1)
-    sass (3.4.9)
-    sexp_processor (4.4.4)
-    sidekiq (3.3.0)
+    sass (3.4.13)
+    sexp_processor (4.4.5)
+    sidekiq (3.3.2)
       celluloid (>= 0.16.0)
-      connection_pool (>= 2.0.0)
+      connection_pool (>= 2.1.1)
       json
       redis (>= 3.0.6)
       redis-namespace (>= 1.3.1)
-    slim (3.0.1)
+    slim (3.0.2)
       temple (~> 0.7.3)
       tilt (>= 1.3.3, < 2.1)
     slop (3.6.0)
-    sorcery (0.8.6)
+    sorcery (0.9.0)
       bcrypt (~> 3.1)
       oauth (~> 0.4, >= 0.4.4)
-      oauth2 (>= 0.8.0, < 1.0.0)
+      oauth2 (>= 0.8.0)
     sprockets (2.12.3)
       hike (~> 1.2)
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
-    sprockets-rails (2.2.2)
+    sprockets-rails (2.2.4)
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (>= 2.8, < 4.0)
     sqlite3 (1.3.10)
-    state_machines (0.1.1)
-    state_machines-activemodel (0.0.3)
-      activemodel (~> 4.1)
-      state_machines (~> 0.1.0)
-    temple (0.7.4)
+    temple (0.7.5)
     the_data_role_block_jquery (0.0.1)
     the_data_role_block_slim (0.0.1)
     the_encrypted_string (0.0.3)
       encryptor (~> 1.3)
     the_log (0.0.2)
       coffee-rails
+    the_notification (0.5.1)
+      slim
     the_simple_sort (0.0.2)
     the_sortable_tree (2.5.0)
       rails (>= 3.1)
@@ -295,23 +268,21 @@ GEM
     thor (0.19.1)
     thread_safe (0.3.4)
     tilt (1.4.1)
-    timecop (0.7.1)
+    timecop (0.7.3)
     timers (4.0.1)
       hitimes
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    uglifier (2.6.1)
+    uglifier (2.7.1)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
-    yandex_cleanweb (0.0.6)
+    yandex_cleanweb (0.0.7)
       nokogiri
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  awesome_nested_set!
-  bootstrap-sass!
   coffee-rails (~> 4.0.0)
   factory_girl
   factory_girl_rails
@@ -326,18 +297,13 @@ DEPENDENCIES
   redis
   rspec-rails (~> 2.0)
   sidekiq
-  slim
   sorcery
   sqlite3
-  state_machines-activerecord!
   the_comments_antispam_services!
   the_comments_base!
   the_comments_manager!
   the_comments_subscriptions!
-  the_data_role_block_jquery
-  the_data_role_block_slim
   the_log
-  the_notification!
   thin
   timecop
   uglifier (>= 1.3.0)

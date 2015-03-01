@@ -44,6 +44,12 @@ Browser
 http://localhost:3000/
 ```
 
+### Stop BACKGROUND PROCESSES (Redis + Sidekiq)
+
+```
+_app/stop.sh
+```
+
 ### Tests start
 
 ```
