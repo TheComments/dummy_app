@@ -12,8 +12,8 @@ source $CURRENT_DIR/_helpers.sh
 #######################################
 
 # MAIN VARS
-RUBY_VERSION='ruby-2.1.1'
-GEMSET_NAME='the_comments'
+RUBY_VERSION='ruby-2.2.0'
+GEMSET_NAME='the_comments_dev'
 ENV_NAME='development'
 
 # APP VARS
