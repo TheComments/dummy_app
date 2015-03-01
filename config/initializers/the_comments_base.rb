@@ -15,6 +15,6 @@ TheCommentsBase.configure do |config|
   # config.akismet_api_key          = nil
   # config.akismet_blog             = nil
 
-  config.default_mailer_email = 'mixer@open-cook.ru'
+  config.default_mailer_email = 'test@example.com'
   config.async_processing     = false
 end
