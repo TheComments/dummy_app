@@ -1,5 +1,6 @@
 mailer:
   service: smtp
+
   host: 'localhost:3000'
 
   sandmail:

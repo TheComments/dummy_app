@@ -30,41 +30,43 @@ cd dummy_app/
 bundle install --binstubs
 ```
 
-### Setup Bash script for development ENV
+### Setup of AntiSpam Services for TheComments/AntiSpam
 
-```sh
-chmod 755 _app/*.sh
+0. Get YANDEX CLEANWEB api key `https://tech.yandex.ru/keys/get/?service=cw`
+0. Get AKISMET api keys `http://akismet.com`
+
+**config/initializers/the_comments_base.rb**
+
+```
+TheCommentsBase.configure do |config|
+  # PARAMS
+
+  config.yandex_cleanweb_api_key  = 'YOUR-YCW-SECRET-TOCKEN'
+
+  config.akismet_api_key          = 'YOUR-AKISMET-SECRET-TOCKEN'
+  config.akismet_blog             = 'YOUR-AKISMET-WEBSITE-NAME'
+end
 ```
 
-EDIT: `_app/_vars.sh`
+### Setup of Email service for TheComments/Subscribtions
 
-```sh
-# MAIN VARS
-RUBY_VERSION='ruby-2.2.0'
-GEMSET_NAME='the_comments_dev'
-ENV_NAME='development'
-```
+You can create any fake Gmail Account for testing, then change config file:
 
-### Prepare Dummy App
+**config/settings.yml**
 
-```sh
-rake db:bootstrap_and_seed
-```
+```yml
+mailer:
+  service: smtp
+  host: 'localhost:3000'
 
-### Start BACKGROUND PROCESSES (Redis + Sidekiq)
+  smtp:
+    email:    my-gmail-email@gmail.com
+    password: MyGMailPa$$worD
 
-```sh
-_app/start.sh
-```
-
-You will see
-
-```sh
-Redis: try to start
-redis-server /Users/admin/rails/my_projects/the_comments_dev/dummy_app/config/redis_6500.config
-
-SideKiq: try to start
-/Users/admin/.rvm/bin/rvm ruby-2.2.0@the_comments_dev do bundle exec bin/sidekiq -e development -d -C /Users/admin/rails/my_projects/the_comments_dev/dummy_app/config/sidekiq.yml
+    authentication: plain
+    address: 'smtp.gmail.com'
+    domain:  'gmail.com'
+    port:    587
 ```
 
 ### App start
@@ -79,23 +81,6 @@ Browser
 
 ```
 http://localhost:3000/
-```
-
-### Stop BACKGROUND PROCESSES (Redis + Sidekiq)
-
-```sh
-_app/stop.sh
-```
-
-You will see
-
-```sh
-Sidekiq: try to stop
-/Users/admin/.rvm/bin/rvm ruby-2.2.0@the_comments_dev do bundle exec bin/sidekiqctl stop /Users/admin/rails/my_projects/the_comments_dev/dummy_app/tmp/pids/sidekiq.pid
-Sidekiq shut down gracefully.
-
-Redis: try to stop
-redis-cli -h localhost -p 6500 shutdown
 ```
 
 ### Tests start

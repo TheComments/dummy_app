@@ -11,6 +11,12 @@ TheCommentsBase.configure do |config|
   config.empty_trap_protection     = true
   config.tolerance_time_protection = true
 
+  # Yandex CleanWeb
+  # https://tech.yandex.ru/keys/get/?service=cw
+
+  # Akismet
+  # http://akismet.com
+
   # config.yandex_cleanweb_api_key  = nil
   # config.akismet_api_key          = nil
   # config.akismet_blog             = nil
