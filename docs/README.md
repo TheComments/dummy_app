@@ -35,15 +35,15 @@ Every time when new comment will be created or existed comment will be updated,
 to fill following fields in `Comment` instance:
 
 ```ruby
-#<Comment:0x0000010189bc58
+<Comment:0x0000010189bc58
   ...
 
   commentable_url:   "/posts/3",
-  commentable_title: "My Feedback",
+  commentable_title: "Post about RubyOnRails 4.2",
   commentable_state: :published,
 
   ...
-]
+>
 ```
 
 These fields will help you to build correct list of recent comments.
