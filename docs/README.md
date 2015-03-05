@@ -27,3 +27,32 @@ class Post < ActiveRecord::Base
   end
 end
 ```
+
+These methods (of model's fields) are very important for building of list of recent comments.
+
+Every time when new comment will be created or existed comment will be updated,
+`before_save` hook from `Comment` model will use these methods of `commentable` model
+to fill following fields in `Comment` instance:
+
+```ruby
+#<Comment:0x0000010189bc58
+  ...
+
+  commentable_url:   "/posts/3",
+  commentable_title: "My Feedback",
+  commentable_state: :published,
+
+  ...
+]
+```
+
+These fields will help you to build correct list of recent comments.
+
+There is an example how you can select recent comments:
+
+```ruby
+@recent_comments = Comment.with_state(:published)
+                    .includes(:commentable)
+                    .where(commentable_state: [:published])
+                    .recent.page(params[:page])
+```
