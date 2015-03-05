@@ -36,6 +36,14 @@ posts = Post.all
     state: :published
   )
 
+  Comment.create!(
+    user: user,
+    commentable: users.sample,
+    title: Faker::Lorem.sentence,
+    raw_content: Faker::Lorem.paragraphs(3).join,
+    state: :published
+  )
+
   print '.'
 end
 
